@@ -15,7 +15,7 @@
    - JWT
    - bcryptjs (for hashing passwords)
 
-1. Client Side
+2. Client Side
 
    - ReactJS
    - Redux
@@ -27,13 +27,13 @@
    - jQuery
    - Font Awesome (React Package)
 
-1. Database
+3. Database
 
    - MongoDB
    - MongooseJS
    - m-Lab
 
-1. Test
+4. Test
    - Jest
    - Enzyme
    - React Test Renderer
@@ -49,7 +49,7 @@
 
 1. Install [Node](https://nodejs.org/en/)
 
-1. Clone this REPO
+2. Clone this REPO
 
    ```bash
    git clone https://github.com/a-soliman/MERN-boilerplate.git
@@ -59,7 +59,7 @@
    cd MERN-Boilerplate/
    ```
 
-1. Install the required packges
+3. Install the required packges
 
    Run 'npm install' or 'npm i' to install the required packages.
 
@@ -67,7 +67,7 @@
    npm install
    ```
 
-1. Create and fill the keys file in /server/config/keys.js
+4. Create and fill the keys file in /server/config/keys.js
 
 ```
 module.exports = {
@@ -113,7 +113,7 @@ module.exports = {
 
    - Open your browser at port 8080 => [http://localhost:8080](http://localhost:8080)
 
-1. Front-End Server (Webpack)
+2. Front-End Server (Webpack)
 
    ```bash
     npm run dev-server:client
@@ -121,7 +121,7 @@ module.exports = {
 
    - Open your browser at port 8080 => [http://localhost:8080](http://localhost:8080)
 
-1. Back-End Server (Nodemon)
+3. Back-End Server (Nodemon)
 
    ```bash
    npm run dev-server:server
@@ -129,7 +129,7 @@ module.exports = {
 
    - Check your console, Port 5555 must be vacated
 
-1. Unit Testing Server (Jest, Enzyme)
+4. Unit Testing Server (Jest, Enzyme)
    ```bash
    npm run test
    ```
