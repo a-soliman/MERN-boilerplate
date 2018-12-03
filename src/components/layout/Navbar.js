@@ -1,10 +1,9 @@
 import React from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout } from "../../actions/auth";
 
 export class Navbar extends React.Component {
-
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
@@ -17,8 +16,8 @@ export class Navbar extends React.Component {
               src={user.avatar}
               alt={user.name}
               style={{
-                width: '25px',
-                marginRight: '10px'
+                width: "25px",
+                marginRight: "10px"
               }}
             />
             Logout
@@ -47,7 +46,7 @@ export class Navbar extends React.Component {
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
         <div className="container">
           <Link to="/" className="navbar-brand">
-            DevConnector
+            MERN Boilerplate
           </Link>
           <button
             className="navbar-toggler"
@@ -59,18 +58,7 @@ export class Navbar extends React.Component {
           </button>
 
           <div className="collapse navbar-collapse" id="mobile-nav">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item">
-                <Link to="/profiles" className="nav-link">
-                  {" "}
-                  Developers
-                </Link>
-              </li>
-            </ul>
-            {
-              isAuthenticated ? authLinkes : guestLinkes
-            }
-
+            {isAuthenticated ? authLinkes : guestLinkes}
           </div>
         </div>
       </nav>
@@ -78,7 +66,7 @@ export class Navbar extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   auth: state.auth
 });
 
@@ -86,4 +74,7 @@ const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Navbar);

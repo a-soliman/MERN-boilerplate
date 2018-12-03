@@ -6,8 +6,6 @@ const passport = require("passport");
 
 /* ROUTES */
 const users = require("./routes/api/users");
-const profile = require("./routes/api/profile");
-const posts = require("./routes/api/posts");
 
 /* EXPRESS APP */
 const app = express();
@@ -35,8 +33,6 @@ require("./config/passport_google")(passport);
 
 /* USE ROUTES */
 app.use("/api/users", users);
-app.use("/api/profile", profile);
-app.use("/api/posts", posts);
 
 /* SERVE REACT APP FOR ALL ROUTES */
 app.get("*", (req, res) => {

@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "Ahmed Soliman",
   "license": "MIT",
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:5555",
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
@@ -35,7 +35,6 @@
     "css-loader": "0.28.4",
     "express": "4.15.4",
     "extract-text-webpack-plugin": "3.0.0",
-    "firebase": "4.2.0",
     "gravatar": "^1.8.0",
     "history": "4.7.2",
     "i": "^0.3.6",

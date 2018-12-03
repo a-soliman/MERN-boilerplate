@@ -10,9 +10,7 @@ import Footer from "../components/layout/Footer";
 import Register from "../components/auth/Register";
 import Login from "../components/auth/Login";
 
-import DashboardPage from "../components/DashboardPage";
 import NotFoundPage from "../components/NotFoundPage";
-import LoginPage from "../components/LoginPage";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 
