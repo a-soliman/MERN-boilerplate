@@ -3,4 +3,5 @@ public/dist/
 package-lock.json
 .env.test
 .env.development
-/server/config/keys.js
+server/config/keys.js
+keys.js
