@@ -7,12 +7,14 @@
 ### Technologies:
 
 1. Server Side
+
    - NodeJS
    - ExpressJS
    - PassportJS (Authentication)
    - OAuth2
    - JWT
    - bcryptjs (for hashing passwords)
+
 1. Client Side
 
    - ReactJS
