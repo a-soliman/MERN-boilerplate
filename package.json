@@ -8,9 +8,9 @@
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server-fe": "webpack-dev-server",
-    "dev-server-be": "nodemon server/server.js",
-    "dev-server": "concurrently \"npm run dev-server-fe\" \"npm run dev-server-be\"",
+    "dev-server:client": "webpack-dev-server",
+    "dev-server:server": "nodemon server/server.js",
+    "dev-server": "concurrently \"npm run dev-server:client\" \"npm run dev-server:server\"",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
     "start": "node server/server.js",
     "heroku-postbuild": "npm run build:prod"

@@ -2,7 +2,7 @@
 
 ## Node, Express, React, MongoDB
 
-- Get your project started in no time with Node, Express, React, Redux, m-lab, Google Auth authentication, Passport local strategy authentication, Sass/SCSS styling, Mongoose Schemas, Jest & Enzyme unit testing and more.
+- Get your project started in no time with Node, Express, React, Redux, m-lab, Google Auth authentication, Passport local strategy authentication, Sass/SCSS styling, Mongoose Schemas, Jest & Enzyme unit testing, Heroku deployment and more.
 
 ### Technologies:
 
@@ -12,8 +12,7 @@
    - PassportJS (Authentication)
    - OAuth2
    - JWT
-   - bcryptjs (for hashing passwords).
-   - AWS
+   - bcryptjs (for hashing passwords)
 1. Client Side
 
    - ReactJS
@@ -22,7 +21,7 @@
    - Babel
    - Axios
    - Sass
-   - BootStrap
+   - BootStrap 4
    - jQuery
    - Font Awesome (React Package)
 
@@ -66,7 +65,7 @@
    npm install
    ```
 
-1. fill the keys file in /server/config/keys.js
+1. Create and fill the keys file in /server/config/keys.js
 
 ```
 module.exports = {
@@ -82,28 +81,48 @@ module.exports = {
 
 ---
 
+### Deployment
+
+#### Heroku:
+
+- This boilerplate is configured to run at Heroku with no need for further configuration.
+
+1. Go through the traditional [Heroku-Cli setup](https://devcenter.heroku.com/articles/heroku-cli).
+2. At the root level of the project
+   ```
+   heroku create
+   ```
+3. push to Heroku
+   ```
+   git push heroku master
+   ```
+
+---
+
 ### Running the Dev Server:
 
 1. Combined Front-End & Back-End Server
+
+   - Runs 2 servers (Express and Webpack) in one terminal window using [concurrently](https://www.npmjs.com/package/concurrently)
 
    ```bash
    npm run dev-server
    ```
 
-   - open your browser at port 8080 => [http://localhost:8080](http://localhost:8080)
+   - Open your browser at port 8080 => [http://localhost:8080](http://localhost:8080)
 
 1. Front-End Server (Webpack)
 
    ```bash
-    npm run dev-server-fe
+    npm run dev-server:client
    ```
 
-   - open your browser at port 8080 => [http://localhost:8080](http://localhost:8080)
+   - Open your browser at port 8080 => [http://localhost:8080](http://localhost:8080)
 
 1. Back-End Server (Nodemon)
 
    ```bash
-   npm run dev-server-be
+   npm run dev-server:server
    ```
 
    - Check your console, Port 5555 must be vacated
