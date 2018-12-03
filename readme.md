@@ -44,7 +44,7 @@
 ### Server Configuration:
 
 1. Proxy :
-   - use "proxy": "http://localhost:5555", in 'package.json', making sure that the port = the backend server's port
+   - use "proxy": "http://localhost:5555", in 'package.json', making sure that the port = the backend server's port on /server/server.js = devserver.proxy in /webpack.config.js
 
 ### Installation
 
