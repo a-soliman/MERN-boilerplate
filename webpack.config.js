@@ -55,7 +55,7 @@ module.exports = env => {
       historyApiFallback: true,
       publicPath: "/dist/",
       port: 8080,
-      proxy: { "/api/**": { target: "http://localhost:5000", secure: false } }
+      proxy: { "/api/**": { target: "http://localhost:5555", secure: false } }
     }
   };
 };
