@@ -6,38 +6,38 @@
 
 ### Technologies:
 
-1. Server Side
+## Server Side
 
-   - NodeJS
-   - ExpressJS
-   - PassportJS (Authentication)
-   - OAuth2
-   - JWT
-   - bcryptjs (for hashing passwords)
+- NodeJS
+- ExpressJS
+- PassportJS (Authentication)
+- OAuth2
+- JWT
+- bcryptjs (for hashing passwords)
 
-2. Client Side
+## Client Side
 
-   - ReactJS
-   - Redux
-   - Webpack
-   - Babel
-   - Axios
-   - Sass
-   - BootStrap 4
-   - jQuery
-   - Font Awesome (React Package)
+- ReactJS
+- Redux
+- Webpack
+- Babel
+- Axios
+- Sass
+- BootStrap 4
+- jQuery
+- Font Awesome (React Package)
 
-3. Database
+## Database
 
-   - MongoDB
-   - MongooseJS
-   - m-Lab
+- MongoDB
+- MongooseJS
+- m-Lab
 
-4. Test
+## Unit Test
 
-   - Jest
-   - Enzyme
-   - React Test Renderer
+- Jest
+- Enzyme
+- React Test Renderer
 
 ---
 
