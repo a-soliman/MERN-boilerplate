@@ -132,9 +132,9 @@ module.exports = {
    npm run test
    ```
 
-# API END-POINTS:
+## API END-POINTS:
 
-## USERS : /api/users
+### USERS : /api/users
 
 - POST /register
 - POST /login
@@ -158,6 +158,8 @@ export const Food = () => (
 </div>
 )
 ```
+
+---
 
 ## Next Steps:
 
