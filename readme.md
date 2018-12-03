@@ -6,7 +6,7 @@
 
 ### Technologies:
 
-## Server Side
+#### Server Side
 
 - NodeJS
 - ExpressJS
@@ -15,7 +15,7 @@
 - JWT
 - bcryptjs (for hashing passwords)
 
-## Client Side
+#### Client Side
 
 - ReactJS
 - Redux
@@ -27,13 +27,13 @@
 - jQuery
 - Font Awesome (React Package)
 
-## Database
+#### Database
 
 - MongoDB
 - MongooseJS
 - m-Lab
 
-## Unit Test
+#### Unit Test
 
 - Jest
 - Enzyme
@@ -49,25 +49,18 @@
 ### Installation
 
 1. Install [Node](https://nodejs.org/en/)
-
 2. Clone this REPO
-
    ```
    git clone https://github.com/a-soliman/MERN-boilerplate.git
    ```
-
    ```
    cd MERN-Boilerplate/
    ```
-
 3. Install the required packges
-
    Run 'npm install' or 'npm i' to install the required packages.
-
    ```
    npm install
    ```
-
 4. Create and fill the keys file in /server/config/keys.js
 
 ```
@@ -79,7 +72,6 @@ module.exports = {
   googleCallbackURL: GOOGLE CALLBACK URL (FROM GOOGLE CONSOLE) FOR GOOGLE AUTHENTICATION,
   defaultGooglePassword: SOME DUMMY PASSWORD HERE
 };
-
 ```
 
 ---
@@ -115,21 +107,17 @@ module.exports = {
    - Open your browser at port 8080 => [http://localhost:8080](http://localhost:8080)
 
 2. Front-End Server (Webpack)
-
    ```
-    npm run dev-server:client
+   npm run dev-server:client
    ```
 
-   - Open your browser at port 8080 => [http://localhost:8080](http://localhost:8080)
+- Open your browser at port 8080 => [http://localhost:8080](http://localhost:8080)
 
 3. Back-End Server (Nodemon)
-
    ```
    npm run dev-server:server
    ```
-
    - Check your console, Port 5555 must be vacated
-
 4. Unit Testing Server (Jest, Enzyme)
    ```
    npm run test
