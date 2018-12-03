@@ -34,6 +34,7 @@
    - m-Lab
 
 4. Test
+
    - Jest
    - Enzyme
    - React Test Renderer
@@ -51,11 +52,11 @@
 
 2. Clone this REPO
 
-   ```bash
+   ```
    git clone https://github.com/a-soliman/MERN-boilerplate.git
    ```
 
-   ```bash
+   ```
    cd MERN-Boilerplate/
    ```
 
@@ -63,7 +64,7 @@
 
    Run 'npm install' or 'npm i' to install the required packages.
 
-   ```bash
+   ```
    npm install
    ```
 
@@ -107,7 +108,7 @@ module.exports = {
 
    - Runs 2 servers (Express and Webpack) in one terminal window using [concurrently](https://www.npmjs.com/package/concurrently)
 
-   ```bash
+   ```
    npm run dev-server
    ```
 
@@ -115,7 +116,7 @@ module.exports = {
 
 2. Front-End Server (Webpack)
 
-   ```bash
+   ```
     npm run dev-server:client
    ```
 
@@ -123,14 +124,14 @@ module.exports = {
 
 3. Back-End Server (Nodemon)
 
-   ```bash
+   ```
    npm run dev-server:server
    ```
 
    - Check your console, Port 5555 must be vacated
 
 4. Unit Testing Server (Jest, Enzyme)
-   ```bash
+   ```
    npm run test
    ```
 
