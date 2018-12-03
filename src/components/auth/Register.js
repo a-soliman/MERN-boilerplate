@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
-import classnames from 'classnames';
-import { register } from '../../actions/auth';
-import GoogleButton from '../ui/GoogleButton';
-import Form from '../ui/Form';
+import { connect } from "react-redux";
+import classnames from "classnames";
+import { register } from "../../actions/auth";
+import GoogleButton from "../ui/GoogleButton";
+import Form from "../ui/Form";
 
 class Register extends Component {
   state = {
@@ -60,9 +60,9 @@ class Register extends Component {
 
   componentDidMount = () => {
     if (this.props.auth.isAuthenticated) this.props.history.push("/dashboard");
-  }
+  };
 
-  componentWillReceiveProps = (nextProps) => {
+  componentWillReceiveProps = nextProps => {
     if (nextProps.errors) {
       this.attachErrorsToState({ ...nextProps.errors });
     }
@@ -72,7 +72,6 @@ class Register extends Component {
     const newFormData = { ...this.state.formData };
     const element = event.target.name;
     const value = event.target.value;
-    console.log(event.target)
     newFormData[element].value = value;
 
     this.setState({
@@ -80,7 +79,7 @@ class Register extends Component {
     });
   };
 
-  attachErrorsToState = (errors) => {
+  attachErrorsToState = errors => {
     const formData = { ...this.state.formData };
     const otherErrors = { ...this.state.errors };
 
@@ -93,13 +92,13 @@ class Register extends Component {
         formData[field].validationMessage = "";
       }
       delete errors[field];
-    };
+    }
     for (const field in errors) {
       otherErrors[field] = errors[field];
-    };
+    }
 
     this.setState({ formData, errors: otherErrors });
-  }
+  };
 
   onFormSubmit = event => {
     event.preventDefault();
@@ -131,8 +130,13 @@ class Register extends Component {
                 onChangleHandler={this.onFormUpdate}
                 onSubmitHandler={this.onFormSubmit}
               />
-              <div className="text-info rounded-circle border border-info my-5 or">Or</div>
-              <GoogleButton link="/api/users/google" text="Sign up with Google" />
+              <div className="text-info rounded-circle border border-info my-5 or">
+                Or
+              </div>
+              <GoogleButton
+                link="/api/users/google"
+                text="Sign up with Google"
+              />
             </div>
           </div>
         </div>
@@ -141,13 +145,16 @@ class Register extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   register: userData => dispatch(register(userData))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Register);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Register);
