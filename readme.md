@@ -2,6 +2,8 @@
 
 ## Node, Express, React, MongoDB
 
+- Get your project started in no time with Node, Express, React, Redux, m-lab, Google Auth authentication, Passport local strategy authentication, Sass/SCSS styling, Mongoose Schemas, Jest & Enzyme unit testing and more.
+
 ### Technologies:
 
 1. Server Side
@@ -36,6 +38,11 @@
    - React Test Renderer
 
 ---
+
+### Server Configuration:
+
+1. Proxy :
+   - use "proxy": "http://localhost:5555", in 'package.json', making sure that the port = the backend server's port
 
 ### Installation
 
@@ -98,11 +105,11 @@
 
 ## USERS : /api/users
 
-- ### POST /register
-- ### POST /login
-- ### GET /google
-- ### GET /google/redirect
-- ### GET /current
+- POST /register
+- POST /login
+- GET /google
+- GET /google/redirect
+- GET /current
 
 ---
 
@@ -121,4 +128,7 @@ export const Food = () => (
 )
 ```
 
-1.
+## Next Steps:
+
+1. Add Node-mailer
+2. Add further 3rd party Authentication (Facebook, Twitter, Github, LinkedIn and Amazon).
