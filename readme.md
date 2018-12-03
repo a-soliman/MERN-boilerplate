@@ -68,6 +68,18 @@
 
 1. fill the keys file in /server/config/keys.js
 
+```
+module.exports = {
+  mongoURI: MONGODB DATABASE URL (LOCAL OR IN M-LAB),
+  secretOrKey: SECRET STRING,
+  googleClientId: GOOGLE CLIENT ID (FROM GOOGLE CONSOLE) FOR GOOGLE AUTHENTICATION,
+  googleClientSecret: GOOGLE CLIENT SECRET (FROM GOOGLE CONSOLE) FOR GOOGLE AUTHENTICATION,
+  googleCallbackURL: GOOGLE CALLBACK URL (FROM GOOGLE CONSOLE) FOR GOOGLE AUTHENTICATION,
+  defaultGooglePassword: SOME DUMMY PASSWORD HERE
+};
+
+```
+
 ---
 
 ### Running the Dev Server:
