@@ -10,6 +10,9 @@ import Footer from "../components/layout/Footer";
 import Register from "../components/auth/Register";
 import Login from "../components/auth/Login";
 
+/* DASHBOARD COMPONENTS */
+import Dashboard from "../components/dashboard/Dashboard";
+
 import NotFoundPage from "../components/NotFoundPage";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
@@ -29,6 +32,7 @@ const AppRouter = () => (
         />
         <PublicRoute path="/register" component={Register} exact={true} />
         <PublicRoute path="/login" component={Login} exact={true} />
+        <PrivateRoute path="/dashboard" component={Dashboard} exact={true} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

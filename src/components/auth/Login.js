@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
-import classnames from 'classnames';
-import { login } from '../../actions/auth';
-import Form from '../ui/Form';
-import GoogleButton from '../ui/GoogleButton';
+import { connect } from "react-redux";
+import classnames from "classnames";
+import { login } from "../../actions/auth";
+import Form from "../ui/Form";
+import GoogleButton from "../ui/GoogleButton";
 
 class Login extends Component {
   state = {
@@ -37,9 +37,9 @@ class Login extends Component {
 
   componentDidMount = () => {
     if (this.props.auth.isAuthenticated) this.props.history.push("/dashboard");
-  }
+  };
 
-  componentWillReceiveProps = (nextProps) => {
+  componentWillReceiveProps = nextProps => {
     if (nextProps.auth.isAuthenticated) {
       this.props.history.push("/dashboard");
     }
@@ -48,7 +48,7 @@ class Login extends Component {
     }
   };
 
-  attachErrorsToState = (errors) => {
+  attachErrorsToState = errors => {
     const formData = { ...this.state.formData };
     const otherErrors = { ...this.state.errors };
 
@@ -61,13 +61,13 @@ class Login extends Component {
         formData[field].validationMessage = "";
       }
       delete errors[field];
-    };
+    }
     for (const field in errors) {
       otherErrors[field] = errors[field];
-    };
+    }
 
     this.setState({ formData, errors: otherErrors });
-  }
+  };
 
   onFormUpdate = event => {
     const newFormData = { ...this.state.formData };
@@ -95,7 +95,7 @@ class Login extends Component {
   render() {
     const { email, password } = this.state.formData;
     return (
-      <div className="login">
+      <div className="login full-height">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
@@ -109,7 +109,9 @@ class Login extends Component {
                 onSubmitHandler={this.onFormSubmit}
               />
 
-              <div className="text-info rounded-circle border border-info my-5 or">Or</div>
+              <div className="text-info rounded-circle border border-info my-5 or">
+                Or
+              </div>
               <GoogleButton link="/api/users/google" text="Login with Google" />
             </div>
           </div>
@@ -128,4 +130,7 @@ const mapDispatchToProps = dispatch => ({
   login: userData => dispatch(login(userData))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Login);

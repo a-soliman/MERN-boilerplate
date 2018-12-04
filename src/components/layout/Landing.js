@@ -14,7 +14,7 @@ class Landing extends Component {
 
   render() {
     return (
-      <div className="landing">
+      <div className="landing full-height">
         <div className="dark-overlay landing-inner text-light">
           <div className="container">
             <div className="row">

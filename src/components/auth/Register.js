@@ -117,7 +117,7 @@ class Register extends Component {
     const { name, email, password, passwordConfirmation } = this.state.formData;
 
     return (
-      <div className="register">
+      <div className="register full-height">
         <div className="container">
           <div className="row">
             <div className="col-md-8 m-auto">
