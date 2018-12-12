@@ -10,12 +10,6 @@ import { logout } from "./actions/auth";
 import "normalize.css/normalize.css";
 import "./styles/styles.scss";
 import "react-dates/lib/css/_datepicker.css";
-/* FONT AWESOME */
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStroopwafel } from "@fortawesome/free-solid-svg-icons";
-
-library.add(faStroopwafel);
 
 const store = configureStore();
 const jsx = (
