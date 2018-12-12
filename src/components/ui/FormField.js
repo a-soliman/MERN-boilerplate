@@ -1,14 +1,5 @@
 import React from "react";
 import classnames from "classnames";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
-  faFacebook,
-  faGithub,
-  faYoutube,
-  faLinkedin,
-  faInstagram
-} from "@fortawesome/free-brands-svg-icons";
 
 const FormField = ({ field, onChangeHandler }) => {
   const generateFieldInstructions = message => {
@@ -22,18 +13,18 @@ const FormField = ({ field, onChangeHandler }) => {
 
     if (field.inputGroup) {
       let icon;
-      if (field.icon === "twitter") icon = faTwitter;
-      if (field.icon === "facebook") icon = faFacebook;
-      if (field.icon === "youtube") icon = faYoutube;
-      if (field.icon === "linkedin") icon = faLinkedin;
-      if (field.icon === "github") icon = faGithub;
-      if (field.icon === "instagram") icon = faInstagram;
+      if (field.icon === "twitter") icon = "fas fa-twitter";
+      if (field.icon === "facebook") icon = "fas fa-facebook";
+      if (field.icon === "youtube") icon = "fas fa-youtube";
+      if (field.icon === "linkedin") icon = "fas fa-linkedin";
+      if (field.icon === "github") icon = "fas fa-github";
+      if (field.icon === "instagram") icon = "fas fa-instagram";
       console.log("inputGroup");
       template = (
         <div className="input-group mb-3">
           <div className="input-group-prepend">
             <span className="input-group-text">
-              <FontAwesomeIcon icon={icon} />
+              <i className={icon} />
             </span>
           </div>
           <input
